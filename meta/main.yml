@@ -1,0 +1,33 @@
+---
+galaxy_info:
+  author: Victor Michel
+  description: Installs sonatype-nexus-community/ahab
+  company: BlackRock Financial Management
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  galaxy_tags:
+    - development
+  platforms:
+  - name: Alpine
+    versions:
+      - all
+  - name: Archlinux
+    versions:
+      - all
+  - name: EL
+    versions:
+      - all
+  - name: Fedora
+    versions:
+      - all
+  - name: Debian
+    versions:
+      - buster
+      - jessie
+      - stretch
+  - name: Ubuntu
+    versions:
+      - all
+  role_name: ahab
+dependencies: []

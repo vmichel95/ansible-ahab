@@ -1,0 +1,46 @@
+---
+# tasks file for ahab
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: look for existing install
+  become: '{{ ahab_privilege_escalate }}'
+  become_user: root
+  changed_when: False
+  stat:
+    path: '{{ ahab_install_dir }}'
+  register: ahab_binary
+- when: not ahab_binary.stat.exists
+  block:
+    - name: make versioned directory to hold ahab {{ ahab_ver }}
+      become: '{{ ahab_privilege_escalate }}'
+      become_user: root
+      file:
+        path: '{{ ahab_install_dir }}'
+        state: directory
+        mode: 0755
+    - name: download ahab {{ ahab_ver }}
+      become: '{{ ahab_privilege_escalate }}'
+      become_user: root
+      get_url:
+        url: '{{ ahab_url }}'
+        checksum: '{{ ahab_checksum }}'
+        dest: '{{ ahab_install_exe }}'
+        mode: 0777
+- name: link ahab and ahab-{{ ahab_ver }}
+  become: '{{ ahab_privilege_escalate }}'
+  become_user: root
+  with_items:
+    - '{{ ahab_link }}'
+    - '{{ ahab_ver_link }}'
+  file:
+    src: '{{ ahab_install_exe }}'
+    dest: '{{ item }}'
+    state: link
