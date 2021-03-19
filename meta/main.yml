@@ -30,6 +30,4 @@ galaxy_info:
     versions:
       - all
   role_name: ahab
-dependencies:
-- role: andrewrothstein.unarchive-deps
-  version: v1.1.5
+dependencies: []

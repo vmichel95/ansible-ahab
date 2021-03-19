@@ -33,7 +33,7 @@
         url: '{{ ahab_url }}'
         checksum: '{{ ahab_checksum }}'
         dest: '{{ ahab_install_exe }}'
-        mode: 0644
+        mode: 0777
 - name: link ahab and ahab-{{ ahab_ver }}
   become: '{{ ahab_privilege_escalate }}'
   become_user: root
