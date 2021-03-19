@@ -1,0 +1,10 @@
+---
+# vars file for ahab
+ahab_platform: '{{ ahab_os }}.{{ ahab_arch }}'
+ahab_exe: ahab-{{ ahab_platform }}-{{ ahab_ver }}
+ahab_url: '{{ ahab_mirror }}/{{ ahab_ver }}/{{ ahab_exe }}'
+ahab_checksum: '{{ ahab_checksums[ahab_ver][ahab_platform] }}'
+ahab_install_dir: '{{ ahab_parent_install_dir }}/ahab-{{ ahab_ver }}'
+ahab_install_exe: '{{ ahab_install_dir }}/ahab'
+ahab_link: '{{ ahab_parent_install_dir }}/bin/ahab'
+ahab_ver_link: '{{ ahab_parent_install_dir }}/bin/ahab-{{ ahab_ver }}'
