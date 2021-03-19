@@ -1,6 +1,6 @@
 ---
 # defaults file for ahab
-ahab_ver: v1.0.0
+ahab_ver: v0.2.4
 ahab_os: linux
 ahab_arch: amd64
 ahab_mirror: https://github.com/sonatype-nexus-community/ahab/releases/download
@@ -17,8 +17,3 @@ ahab_checksums:
     windows.amd64: sha256:cddefc1eec774af81f83437a85b3314e0ec8d983bd69c5068b978e9d9ce23817
     # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.4/ahab-windows.386-v0.2.4.exe
     windows.386: sha256:df7e46cdd86801a337bf6f984542156fb78653686eeb22c1f0a07b8262ee8257
-
-  ahab-linux.amd64-v0.2.4
-  ahab-linux.386-v0.2.4
-  ahab-windows.amd64-v0.2.4.exe
-  ahab-windows.386-v0.2.4.exe
