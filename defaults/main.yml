@@ -1,6 +1,6 @@
 ---
 # defaults file for ahab
-ahab_ver: v0.2.4
+ahab_ver: v0.2.5
 ahab_os: linux
 ahab_arch: amd64
 ahab_mirror: https://github.com/sonatype-nexus-community/ahab/releases/download
