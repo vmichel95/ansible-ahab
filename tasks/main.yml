@@ -31,7 +31,8 @@
       become_user: root
       get_url:
         url: '{{ ahab_url }}'
-        checksum: '{{ ahab_checksum }}'
+        checksum: '{{ ahab_disable_checksum_validation | ternary(omit,ahab_checksum) }}'
+        validate_certs: '{{ not ahab_disable_ssl_cert_verify }}'
         dest: '{{ ahab_install_exe }}'
         mode: 0777
 - name: link ahab and ahab-{{ ahab_ver }}
