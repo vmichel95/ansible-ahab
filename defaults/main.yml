@@ -8,6 +8,15 @@ ahab_parent_install_dir: /usr/local
 ahab_privilege_escalate: True
 
 ahab_checksums:
+  v0.2.5:
+    # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.5/ahab-linux.amd64-v0.2.5
+    linux.amd64: sha256:b0d919d911e34611903a56336b04524a556d3b3d60f3440fc93aefaba0c84706
+    # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.5/ahab-linux.386-v0.2.5
+    linux.386: sha256:67b9bf18cbe7b42cc83f57d78a7ca51fe40d823c4efd17bac0dd406da9bae327
+    # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.5/ahab-windows.amd64-v0.2.5.exe
+    windows.amd64: sha256:ac00c2f192900089f5d757eccea9916d37fab6516e23882a8498d3676586fff6
+    # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.5/ahab-windows.386-v0.2.5.exe
+    windows.386: sha256:46695a9672a9a529944d1fd4e97c7a6ab67e4a68c88511081a7e8e157f7f8b77
   v0.2.4:
     # https://github.com/sonatype-nexus-community/ahab/releases/download/v0.2.4/ahab-linux.amd64-v0.2.4
     linux.amd64: sha256:557e33ddb66a3137cba7cf37a9feefc9b86b83608d6e4d0e387d1b9f456b1f4b
